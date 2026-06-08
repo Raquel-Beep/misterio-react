@@ -1,0 +1,88 @@
+.loadingScreen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #2b1d12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+}
+ 
+.loadingCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 80px;
+  background: rgba(25, 25, 25, 0.95);
+  border: 1px solid #5c3a21;
+  border-radius: 30px;
+  box-shadow: 0 0 40px rgba(139, 90, 43, 0.3);
+  animation: fadeIn 0.6s ease forwards;
+}
+ 
+.loadingLogo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 14px rgba(176, 125, 72, 0.6));
+  animation: pulse 1.8s ease-in-out infinite;
+}
+ 
+.loadingTitulo {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin: 0;
+  letter-spacing: 2px;
+}
+ 
+.loadingSubtitulo {
+  font-size: 1rem;
+  color: #b07d48;
+  margin: 0;
+  letter-spacing: 1px;
+}
+ 
+ 
+.trilho {
+  width: 280px;
+  height: 6px;
+  background: #2a2a2a;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid #3a2510;
+  position: relative;
+  margin-top: 10px;
+}
+ 
+.trem {
+  height: 100%;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, #b07d48, #f0c070, #b07d48, transparent);
+  border-radius: 3px;
+  animation: mover 1.6s ease-in-out infinite;
+}
+ 
+ 
+.loadingDica {
+  font-size: 0.8rem;
+  color: #5a5a5a;
+  margin-top: 6px;
+  font-style: italic;
+}
+ 
+ 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+@keyframes pulse {
+  0%, 100% { transform: scale(1);    opacity: 1; }
+  50%       { transform: scale(1.08); opacity: 0.85; }
+}
+ 
+@keyframes mover {
+  0%   { transform: translateX(-80px); }
+  100% { transform: translateX(280px); }
+}
